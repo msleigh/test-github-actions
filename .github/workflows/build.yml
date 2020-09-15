@@ -24,4 +24,7 @@ jobs:
       - name: Run tests
         run:
           python -m pytest
+      - name: Check syntax
+        run:
+          black --check ./*.py ./tests/*.py
 

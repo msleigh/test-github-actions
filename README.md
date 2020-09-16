@@ -55,8 +55,8 @@ is defined to run on the latest version of Ubuntu, and which consists of four
 steps (which are run sequentially). Each step is given a (human-readable) `name`,
 and a sequence of commands to run in the `run` block. The first two steps set
 up the Python environment in which to run the tests, and then the latter two
-steps use (PyTest)[https://pytest.org] to run the provided unit tests, and
-(Black)[https://black.readthedocs.io/en/stable] to check the Python
+steps use [PyTest](https://pytest.org) to run the provided unit tests, and
+[Black](https://black.readthedocs.io/en/stable) to check the Python
 formatting, respectively.
 
 The `uses` lines bring in preset GitHub Actions; first to check out the
@@ -122,7 +122,7 @@ GitHub's docs say:
 > a fork.
 
 Consider the following workflow, to publish a Python package to
-(PyPI)[https://pypi.org] (taken directly from the GitHub examples):
+[PyPI](https://pypi.org) (taken directly from the GitHub examples):
 
 ```yaml
 # This workflows will upload a Python Package using Twine when a release is
@@ -174,7 +174,7 @@ the left pane.
 
 A pre-made GitHub Action is just a Git repo. An example of the pre-defined
 GitHub Actions is the `setup-python` action used in the above and found here:
-[https://github.com/actions/setup-python](https://github.com/actions/setup-python).
+<https://github.com/actions/setup-python>.
 
 You can create your own generic GitHub actions and publish them for others to
 use; all you need to do is define an `action.yml` file in the root of the
@@ -209,12 +209,12 @@ Other people can use this by adding:
 
 ## Links
 
-- GitHub Actions: https://github.com/features/actions
+- GitHub Actions: <https://github.com/features/actions>
 
 - GitHub Actions docs (with yml definitions):
   https://docs.github.com/en/actions 
     - e.g. on how to create an action:
-      https://docs.github.com/en/actions/creating-actions
+      <https://docs.github.com/en/actions/creating-actions>
 
-- GitHub Actions Marketplace: https://github.com/marketplace?type=actions to
+- GitHub Actions Marketplace: <https://github.com/marketplace?type=actions> to
   browse existing solutions

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="test-github-actions",
-    version="0.0.5",
+    version="0.0.6",
     author="M Sleigh",
     author_email="author@example.com",
     description="Learn/test GitHub Actions for running CI/CD",

@@ -43,7 +43,7 @@ jobs:
           python -m pytest
       - name: Check syntax
         run:
-          black --check ./*.py ./tests/*.py
+          black --check .
 ```
 
 The `on:` block defines what actions will trigger this workflow; in this

@@ -88,6 +88,23 @@ ci:
 
 so that the `ci` job is run on all of the specified operating systems.
 
+The "matrix" of environments can have multiple dimensions; e.g. here we test
+over a list of Python versions as well as over the list of operating systems:
+
+```yaml
+ci:
+  strategy:
+    matrix:
+      os: [ubuntu-latest, macos-latest]
+      python-version: [3.6, 3.7, 3.8]
+  runs-on: ${{ matrix.os }}
+  steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+```
 
 ## GitHub Secrets
 

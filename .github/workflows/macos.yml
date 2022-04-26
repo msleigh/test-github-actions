@@ -45,8 +45,10 @@ jobs:
           pwd
           echo "${PATH}"
           echo "${PERM}"
-          fcm --versiona
+          fcm --version
           export CC="$(brew --prefix)/bin/gcc-11"
           export CXX="$(brew --prefix)/bin/g++-11"
-          $CC
+          $CC -fopenmp ./omptest.c
+          ./a.out
           $CXX
+

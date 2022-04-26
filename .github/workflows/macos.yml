@@ -27,16 +27,16 @@ jobs:
           python -m pip install --upgrade pyyaml ruamel.yaml
       - name: Install other dependencies
         run: |
-          PERM="${PWD}"
-          export PERM
           brew install coreutils
-          PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:${PATH}"
           curl -L -O https://github.com/metomi/fcm/archive/refs/tags/2021.05.0.tar.gz
           tar xzf 2021.05.0.tar.gz
-          PATH="${PWD}/fcm-2021.05.0/bin:${PATH}"
-          export PATH
       - name: Run tests
         run: |
+          PERM="${PWD}"
+          export PERM
+          PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:${PATH}"
+          PATH="${PWD}/fcm-2021.05.0/bin:${PATH}"
+          export PATH
           sw_vers
           python --version
           brew --prefix

@@ -30,6 +30,7 @@ jobs:
           brew install coreutils
           curl -L -O https://github.com/metomi/fcm/archive/refs/tags/2021.05.0.tar.gz
           tar xzf 2021.05.0.tar.gz
+          brew install cmake openmpi gcc eigen boost fftw hdf5 netcdf
       - name: Run tests
         run: |
           PERM="${PWD}"
@@ -44,3 +45,8 @@ jobs:
           pwd
           echo "${PATH}"
           echo "${PERM}"
+          fcm --versiona
+          export CC="$(brew --prefix)/bin/gcc-11"
+          export CXX="$(brew --prefix)/bin/g++-11"
+          $CC
+          $CXX

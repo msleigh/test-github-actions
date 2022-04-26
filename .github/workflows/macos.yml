@@ -12,8 +12,8 @@ jobs:
   ci:
     strategy:
       matrix:
-        os: [macos-latest]
-        python-version: [3.6, 3.7, 3.8]
+        os: [macos-11, macos-12]
+        python-version: [3.8, 3.9]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -27,4 +27,5 @@ jobs:
           pip install pyyaml ruamel.yaml
       - name: Run tests
         run:
+          sw_vers
           python --version

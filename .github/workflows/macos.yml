@@ -28,6 +28,7 @@ jobs:
       - name: Install other dependencies
         run: |
           brew install coreutils
+          echo "$(brew --prefix)/opt/coreutils/libexec/gnubin" >> $GITHUB_PATH
           curl -L -O https://github.com/metomi/fcm/archive/refs/tags/2021.05.0.tar.gz
           tar xzf 2021.05.0.tar.gz
           brew install cmake openmpi gcc eigen boost fftw hdf5 netcdf
@@ -50,5 +51,5 @@ jobs:
           export CXX="$(brew --prefix)/bin/g++-11"
           $CC -fopenmp ./omptest.c
           ./a.out
-          $CXX
+          $CXX || true
 
